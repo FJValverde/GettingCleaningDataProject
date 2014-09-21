@@ -152,7 +152,8 @@ if (!debug){
 ##############################################################################################
 # Decision #1: We only select those measurements which have mean and std components calculated. 
 cat("2. Extracting the mean and standard deviations for measurements that have both...\n")
-dfSelected <- select(df, act_code,subject, matches("mean|std",ignore.case=FALSE))  # Some vars have CamelCase names.
+dfSelected <- select(df, act_code,subject, matches("mean|std",ignore.case=FALSE),-matches("meanFreq",ignore.case=FALSE))  # Some vars have CamelCase names.
+# dfSelected <- select(df, act_code,subject, matches("mean|std",ignore.case=FALSE))
 if (debug){
     str(dfSelected)
 }
@@ -204,6 +205,7 @@ newNames <- sub("\\.\\.(\\.)?","",newNames)
 # And we prefer the specification of the measures first, then the aggregate operation, e.g. XMean or XStd
 # instead of MeanX, StdX
 newNames <- sub("(Mean|Std)(X|Y|Z)", "\\2\\1",newNames)
+newNames <- sub("Mag", "Magnitude",newNames)
 # Finally rename with the new names
 colnames(dfSelected) <- newNames
 if (debug){
