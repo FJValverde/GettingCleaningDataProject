@@ -226,4 +226,4 @@ if (debug){
 }
 cat("Producing uploadable textual version of the data frame to ./tidy.txt  ...\n")
 write.table(tidy,"./tidy.txt",row.name=FALSE)
-cat("This can be read with: newTidy <- read.table(\"./tidy.txt\")\ns")
+cat("This can be read with: newTidy <- read.table(\"./tidy.txt\")\n")
