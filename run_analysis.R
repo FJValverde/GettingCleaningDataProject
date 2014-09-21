@@ -118,7 +118,7 @@ if (debug) {
     str(trainX)
 }
 # Read train subject data...
-trainSubjectsFile <- "UCI\ HAR\ Dataset/train/subject_train.txt\n"
+trainSubjectsFile <- "UCI\ HAR\ Dataset/train/subject_train.txt"
 trainSubjects <- read.table(trainSubjectsFile, col.names=c("subject"), colClasses=c("factor"))
 # The subjects are really a factor: there is nothing special in the integers
 if (debug){
