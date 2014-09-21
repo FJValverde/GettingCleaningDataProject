@@ -224,6 +224,6 @@ if (debug){
     str(tidy)
     head(tidy)
 }
-cat("Producing uploadable textual version of the data frame to ./tidy.txt  ...")
-write.table(tidy,"./tidy.txt")
-cat("This can be read with: newTidy <- read.table(\"./tidy.txt\")")
+cat("Producing uploadable textual version of the data frame to ./tidy.txt  ...\n")
+write.table(tidy,"./tidy.txt",row.name=FALSE)
+cat("This can be read with: newTidy <- read.table(\"./tidy.txt\")\ns")
