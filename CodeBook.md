@@ -6,7 +6,11 @@ http://www.icpsr.umich.edu/files/deposit/Guide-to-Codebooks_v1.pdf .
 
 We only document here those values which are changed from the original
 variables in
-<tt>UCI HAR Dataset/features.txt</tt>
+<tt>UCI HAR Dataset/features.txt</tt>.
+For information on the original content of the variables that motivate
+the selection and encoding below consult
+<tt>UCI HAR Dataset/features_info.txt</tt>.
+
 # Variables
 
 They are explained as:
